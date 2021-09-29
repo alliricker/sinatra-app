@@ -1,0 +1,19 @@
+
+  <% if Helpers.is_logged_in?(session) %>
+  <form action='/books' method="post">
+    <h2>Add a New Book:</h2>
+    <input type="text" name="title"><br>
+    <input type="text" name="author"><br>
+    <input type="text" name="summary"><br>
+
+    <input type="submit" name="submit" id="submit">
+
+    <input type="submit" name="submit">
+
+
+  </form>
+
+
+<% else %>
+<h2> You must be logged in to use this feature. <h2>
+<% end %>
