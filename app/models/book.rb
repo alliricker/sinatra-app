@@ -1,6 +1,6 @@
 require_relative './concerns/slugifiable.rb'
 
-class Tweet < ActiveRecord::Base
+class Book < ActiveRecord::Base
   include Slugifiable::InstanceMethods
   extend Slugifiable::ClassMethods
 

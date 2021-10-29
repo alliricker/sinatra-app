@@ -11,3 +11,6 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem "tux"
+gem 'rspec'
+gem 'rack-test'
+gem 'capybara'
