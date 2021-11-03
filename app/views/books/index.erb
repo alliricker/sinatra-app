@@ -1,8 +1,7 @@
 <h2> Welcome, <%= current_user.username %> </h2>
 <h3><a href="/books/new">NEW BOOK</a><h3>
 <h3> - BOOKS - </h3>
+<p>click on any book title for more information</p>
 <% @books.each do |book| %>
-<li>
-<%= book.title %>
-</li>
+<li><a href="/books/<%= book.id %>"><%=book.title%></a></li>
 <% end %>

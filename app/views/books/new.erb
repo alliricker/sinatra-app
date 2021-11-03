@@ -2,9 +2,9 @@
   <% if logged_in? %>
   <form action='/books' method="post">
     <h2>Add a New Book:</h2>
-    <input type="text" name="title"><br>
-    <input type="text" name="author"><br>
-    <input type="text" name="summary"><br>
+    <input type="text" value="title" id="title" name="title"><br>
+    <input type="text" value="author" id="author" name="author"><br>
+    <input type="text" value="summary" id= "summary" name="summary"><br>
 
     <input type="submit" name="submit" id="submit">
 
