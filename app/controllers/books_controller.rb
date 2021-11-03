@@ -23,13 +23,22 @@ class BooksController < ApplicationController
             if params[:title] == ""
                 redirect to "/books/new"
             else
-                @books = current_user.books.build(title: params[:title])
+                @book = current_user.books.build(title: params[:title], author: params[:author], summary: params[:summary])
                 if @book.save
-                    redirect to "/books/#{@book.title}"
+                    redirect to "/books/#{@book.id}"
                 else
                     redirect to "/books/new"
                 end
             end
+        else
+            redirect to '/login'
+        end
+    end
+
+    get '/books/:id' do 
+        if logged_in?
+            @book = Book.find_by_id(params[:id])
+            erb :'books/show_book'
         else
             redirect to '/login'
         end

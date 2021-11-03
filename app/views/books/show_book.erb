@@ -1,0 +1,15 @@
+
+<h1> <%= @book.title %> </h1>
+<p> <%= @book.author %> <p>
+<p> <%= @book.summary %> <p>
+
+
+
+
+<form method="post" action="/books/<%=@book.id%>/delete">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Book">
+</form>
+<br><br>
+<a href="/tweets/<%=@book.id%>/edit">Edit Book</a><br><br>
+<a href='/tweets'>Home</a>
