@@ -3,19 +3,24 @@
    <head>
    <style>
    @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-   body {background_color: White;
+   body {background-color: White;
    font-family: 'Courier New', monospace;}
    h1 {color: DarkOliveGreen;
    font-family: 'Rampart One', cursive;
-   font-size: 96px;}
+   font-size: 84px;}
    h2 {color: DarkOliveGreen;}
    h3 {color: DarkOliveGreen;}
-   a {color: GoldenRod;}
    title {color: DarkOliveGreen;
    font-family: 'Rampart One', cursive;
    font-size: 96px;}
    li {color: DarkOliveGreen;}
-   input {font-family: 'Courier New', monospace;}
+   input {font-family: 'Courier New', monospace;
+   text-align: left;
+   vertical-align: text-top;}
+   input[name=summary] {height: 100px;
+   resize: none;}
+   a {text-decoration: none;
+   color: DarkOliveGreen;}
    </style>
 
     <title>READ IT!</title>
@@ -23,7 +28,7 @@
   <body>
 
     <div class="container">
-      <h1>READ IT!</h1>
+      <h1><a href="/books">READ IT!</a></h1>
     <%= yield %>
     </div>
 
