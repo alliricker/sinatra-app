@@ -10,10 +10,29 @@ class BooksController < ApplicationController
     end
 
     get '/books/new' do 
+        @books = Book.all
         if logged_in?
             erb :'books/new'
         else
             redirect to '/login'
+        end
+    end
+
+    get '/books/read' do 
+        @books = Book.all 
+        if logged_in? 
+            erb :'books/read'
+        else
+            redirect to '/login'
+        end
+    end
+
+    post '/books/read' do 
+        if logged_in?
+           @books = Book.find_by_id(params["check"])
+           erb :'books/show_read'
+        else
+        redirect to "/login"
         end
     end
 
