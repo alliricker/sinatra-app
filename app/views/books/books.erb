@@ -1,4 +1,6 @@
 
+<h3> - BOOKS - </h3>
+<p>click on any book title for more information</p>
 <% @books.each do |book| %>
 <li><a href="/books/<%= book.id %>"><%=book.title%></a></li>
 <% end %>

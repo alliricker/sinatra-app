@@ -1,6 +1,0 @@
- <form action='/books/read' method="post">
- <% @books.each do |book| %>
-<li><%=book.title%></a></li>
-Read It? <input type="checkbox" name= "check" id=<%= book.id %> value=<%= book.id %>><br><br>
-<% end %>
-<input type="submit" name="submit" id="submit">
