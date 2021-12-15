@@ -1,0 +1,5 @@
+<h2> <%= @user %> BOOKS: <h2>
+    <% @user.books.each do |book| %>
+    <li> <%= book.title %> <li>
+    <li> <%= book.author %> <li>
+<% end %>
