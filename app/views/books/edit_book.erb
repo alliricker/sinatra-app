@@ -2,10 +2,9 @@
 
 <form method="post" action="/books/<%=@book.id%>">
     <input id="hidden" type="hidden" name="_method" value="PATCH">
-    Tile:<br><input type="text" name="title" value="<%= @book.title %>"> <br>
-    Author:<br><input type="text" name="author" value="<%= @book.author %>"><br><br>
-    Summary:<br><textarea type="textbox" name="summary" value="<%= @book.summary %>"></textarea><br><br>
-    Notes:<br><textarea type="text" name="notes" value="<%= @book.notes %>"></textarea><br><br>
+    Tile:<br><input type="text" name="title" id="title" value="<%= @book.title %>"> <br>
+    Author:<br><input type="text" name="author" id="author" value="<%= @book.author %>"><br><br>
+    Summary:<br><textarea type="text" name="summary" id="summary"> <%= @book.summary %> </textarea><br><br>
     <input type="submit" value="Submit" id="Edit Book">
 
 </form>

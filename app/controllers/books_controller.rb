@@ -18,8 +18,8 @@ class BooksController < ApplicationController
     end
 
     get '/books/new' do 
-        @books = Book.all
         if logged_in?
+            @books = Book.all
             erb :'books/new'
         else
             redirect to '/login'
