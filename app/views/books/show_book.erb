@@ -1,6 +1,7 @@
 <h2> <%= @book.title %> </h2>
 <p> <%= @book.author %> <p>
 <p> <%= @book.summary %> <p>
+<p> <%=@book.notes %> <p>
 
 <form method="post" action="/books/<%=@book.id%>/delete">
     <input id="hidden" type="hidden" name="_method" value="DELETE">
