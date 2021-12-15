@@ -10,7 +10,7 @@ class BooksController < ApplicationController
 
     get '/books' do 
         if logged_in?
-            @books = Book.all
+            @books = Book.where(user_id: current_user.id)
             erb :'books/books'
         else 
             redirect to '/login'
