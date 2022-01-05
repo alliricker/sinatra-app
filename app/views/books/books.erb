@@ -1,8 +1,7 @@
-
-<h3> - BOOKS - </h3>
+<div class="content">
+<h3> - ALL BOOKS - </h3>
 <p>click on any book title for more information or to edit/delete</p>
 <% @books.each do |book| %>
 <li><a href="/books/<%= book.id %>"><%=book.title%></a></li><br><br>
 <% end %>
-
-<a href= "/books/new"> ADD A BOOK! </a>
+</div>

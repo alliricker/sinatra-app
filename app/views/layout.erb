@@ -2,34 +2,100 @@
 <html>
    <head>
    <style>
-   @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-   body {background-color: White;
-   font-family: 'Courier New', monospace;}
-   h1 {color: DarkOliveGreen;
-   font-family: 'Rampart One', cursive;
-   font-size: 84px;}
-   h2 {color: DarkOliveGreen;}
-   h3 {color: DarkOliveGreen;}
-   title {color: DarkOliveGreen;
-   font-family: 'Rampart One', cursive;
-   font-size: 96px;}
-   li {color: DarkOliveGreen;}
-   input {font-family: 'Courier New', monospace;
-   text-align: left;}
-   textarea {min-height: 100px;
-   width: 300px;}
-   a {text-decoration: none;
-   color: DarkOliveGreen;}
+   body {
+    background-color: white;
+    font-family: 'Courier New', monospace;}
+   h1 {
+     color: DarkOliveGreen;
+     font-family: 'Rampart One', cursive;
+     font-size: 84px;
+   }
+   h2 {
+     color: DarkOliveGreen;
+   }
+   h3 {
+     color: DarkOliveGreen;}
+
+   li {
+     color: DarkOliveGreen;
+   }
+   input {
+     font-family: 'Courier New', monospace;
+     text-align: left;
+   }
+   textarea {
+     min-height: 100px;
+     width: 300px;
+   }
+   a {
+     text-decoration: none;
+     color: DarkOliveGreen;
+   }
+   img {
+     width: 900px;
+     height: 365px;
+     display: block;
+   }
+   .header {
+     width: 100%;
+     text-align: center;
+     padding:20px;
+   }
+   .topnav {
+     overflow: hidden;
+     background-color: DarkOliveGreen;
+   }
+   .topnav a {
+     float: left;
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+   }
+   .content {
+     position: center; 
+     display: block;
+     text-align: left;
+     float: left;
+     margin-bottom: 500px;
+   }
+   .footer {
+     width: 100%;
+     position: relative;
+     padding: 20px;
+     bottom:0px;
+   }
+   .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+   }
    </style>
+   </head>
+   <body>
 
-    <title>READ IT!</title>
-  </head>
-  <body>
+   <title>READ IT!</title>
 
-    <div class="container">
-      <h1><a href="/">READ IT!</a></h1>
-    <%= yield %>
+    <div class="header">
+      <a href="/"><img src="https://hosting.photobucket.com/images/pp94/alliricker/READ-IT!_(Desktop_Wallpaper)_(Banner_(Landscape))_(1).png" alt="Header Read It Logo" class="center"></a>
     </div>
+
+    <div class="topnav">
+       <a href="/books">My Books</a>
+       <a href="/books/new">Add a New Book</a>
+       <a href="/logout">Log Out</a>
+    </div>
+
+    <div class="content">
+
+    </div>
+
+
+    <div class="footer">
+      <img src="https://hosting.photobucket.com/images/pp94/alliricker/read_it_footer.png" alt="Footer Image of Books" class="center">
+    </div>
+      <%= yield %>
 
 
 </html>
