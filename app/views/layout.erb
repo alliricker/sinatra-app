@@ -2,70 +2,100 @@
 <html>
    <head>
    <style>
+
    body {
+    background-image: url("https://hosting.photobucket.com/images/pp94/alliricker/transparent_footer_read_it.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
     background-color: white;
-    font-family: 'Courier New', monospace;}
+    font-family: 'Courier New', monospace;
+    color: DarkOliveGreen}
+
    h1 {
-     color: DarkOliveGreen;
-     font-family: 'Rampart One', cursive;
      font-size: 84px;
    }
-   h2 {
-     color: DarkOliveGreen;
-   }
-   h3 {
-     color: DarkOliveGreen;}
 
-   li {
-     color: DarkOliveGreen;
-   }
-   input {
-     font-family: 'Courier New', monospace;
+   textarea, input {
+     position: center;
      text-align: left;
+     font-family: 'Courier New', monospace;
+     font-size: 14px;
+     color: DarkOliveGreen;
+     padding: 12px;
+     margin: 4px;
+     box-sizing: border-box;
+     border: 3px solid DarkOliveGreen;
+     border-radius: 50px;
    }
+
+   .button{
+     border-radius: 75px;
+     border: none;
+     padding: 14px;
+     font-family: 'Courier New', monospace;
+     font-size: 16px;
+     color: white;
+     background-color: DarkOliveGreen;
+     }
+
+   .button:hover {
+     background-color: #dba222;
+   }
+
    textarea {
      min-height: 100px;
      width: 300px;
    }
+
    a {
      text-decoration: none;
      color: DarkOliveGreen;
    }
+
+   a:hover {
+     background-color: #dba222;
+   }
+
    img {
      width: 900px;
-     height: 365px;
      display: block;
    }
+
    .header {
      width: 100%;
      text-align: center;
-     padding:20px;
+     padding: 10px;
    }
+
    .topnav {
      overflow: hidden;
      background-color: DarkOliveGreen;
+     margin-bottom: 20px;
    }
+
    .topnav a {
      float: left;
      display: block;
      color: white;
      text-align: center;
-     padding: 14px 16px;
+     padding: 14px 20px;
      text-decoration: none;
    }
+
    .content {
      position: center; 
      display: block;
      text-align: left;
      float: left;
-     margin-bottom: 500px;
+     margin-bottom: 250px;
    }
-   .footer {
-     width: 100%;
-     position: relative;
-     padding: 20px;
-     bottom:0px;
+
+   .read {
+     display: block;
+     position: center;
    }
+  
    .center {
      display: block;
      margin-left: auto;
@@ -78,23 +108,20 @@
    <title>READ IT!</title>
 
     <div class="header">
-      <a href="/"><img src="https://hosting.photobucket.com/images/pp94/alliricker/READ-IT!_(Desktop_Wallpaper)_(Banner_(Landscape))_(1).png" alt="Header Read It Logo" class="center"></a>
+      <a href="/"><img src="https://hosting.photobucket.com/images/pp94/alliricker/READ-IT!_(Desktop_Wallpaper)_(Banner_(Landscape))_(2).png" alt="Header Read It Logo" class="center"></a>
     </div>
 
     <div class="topnav">
-       <a href="/books">My Books</a>
-       <a href="/books/new">Add a New Book</a>
-       <a href="/logout">Log Out</a>
+       <a href="/login"> Log In </a>
+       <a href="/"> Home </a>
+       <a href="/books"> My Books (View/Edit/Delete) </a>
+       <a href="/books/new"> Add a New Book </a>
+       <a href="/logout"> Log Out </a> 
     </div>
 
-    <div class="content">
+    <div class="read"> </div>
 
-    </div>
-
-
-    <div class="footer">
-      <img src="https://hosting.photobucket.com/images/pp94/alliricker/read_it_footer.png" alt="Footer Image of Books" class="center">
-    </div>
+    <div class="content"> </div>
       <%= yield %>
 
 
